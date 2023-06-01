@@ -1,14 +1,8 @@
-# GPT-4 & LangChain - Create a ChatGPT Chatbot for Your PDF Files
+# Chat your PDFs
 
 Use the new GPT-4 api to build a chatGPT chatbot for multiple Large PDF files.
 
 Tech stack used includes LangChain, Pinecone, Typescript, Openai, and Next.js. LangChain is a framework that makes it easier to build scalable AI/LLM apps and chatbots. Pinecone is a vectorstore for storing embeddings and your PDF in text to later retrieve similar docs.
-
-[Tutorial video](https://www.youtube.com/watch?v=ih9PBGVVOO4)
-
-[Join the discord if you have questions](https://discord.gg/E4Mc77qwjm)
-
-The visual guide of this repo and tutorial is in the `visual guide` folder.
 
 **If you run into errors, please review the troubleshooting section further down this page.**
 
@@ -44,8 +38,12 @@ OPENAI_API_KEY=
 
 PINECONE_API_KEY=
 PINECONE_ENVIRONMENT=
-
 PINECONE_INDEX_NAME=
+
+S3_BUCKET_NAME=
+S3_REGION=
+S3_ACCESS_KEY_ID=
+S3_SECRET_ACCESS_KEY=
 
 ```
 
@@ -60,11 +58,9 @@ PINECONE_INDEX_NAME=
 
 **This repo can load multiple PDF files**
 
-1. Inside `docs` folder, add your pdf files or folders that contain pdf files.
+1. Run the script `npm run ingest` to 'ingest' and embed your docs. If you run into errors troubleshoot below.
 
-2. Run the script `npm run ingest` to 'ingest' and embed your docs. If you run into errors troubleshoot below.
-
-3. Check Pinecone dashboard to verify your namespace and vectors have been added.
+2. Check Pinecone dashboard to verify your namespace and vectors have been added.
 
 ## Run the app
 
@@ -97,7 +93,3 @@ In general, keep an eye out in the `issues` and `discussions` section of this re
 ## Credit
 
 Frontend of this repo is inspired by [langchain-chat-nextjs](https://github.com/zahidkhawaja/langchain-chat-nextjs)
-# chat-s3-data
-# chat-s3-data
-# chat-s3-data
-# chat-s3-data
